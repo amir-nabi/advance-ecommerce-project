@@ -22,6 +22,8 @@
 <link rel="stylesheet" href="{{ asset('frontend/assets/css/rateit.css') }}">
 <link rel="stylesheet" href="{{ asset('frontend/assets/css/bootstrap-select.min.css') }}">
 
+	  
+	<!-- Style-->  
 <!-- Icons/Glyphs -->
 <link rel="stylesheet" href="{{ asset('frontend/assets/css/font-awesome.css') }}">
 

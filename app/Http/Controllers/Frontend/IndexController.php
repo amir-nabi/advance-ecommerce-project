@@ -5,13 +5,20 @@ namespace App\Http\Controllers\Frontend;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Auth;
+use App\Models\Product;
+use App\Models\Slider;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 
 class IndexController extends Controller
 {
     public function index(){
-        return view('frontend.index');
+        $featuredProduct = Product::where('featured',1)->orderBy('id','DESC')->limit(10)->get();
+        $hotdeal = Product::where('hot_deals',1)->orderBy('id','DESC')->limit(4)->get();
+        $products = Product::where('status',1)->orderBy('id','ASC')->limit(10)->get();
+        $sliders = Slider::where('status',1)->orderBy('id','DESC')->limit(3)->get();
+        $specialdeal = Product::where('special_deals',1)->orderBy('id','DESC')->limit(6)->get();
+        return view('frontend.index',compact('sliders','products','featuredProduct','specialdeal','hotdeal'));
     }
 
     public function UserLogout(){

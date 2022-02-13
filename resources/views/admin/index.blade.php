@@ -5,6 +5,7 @@
 <div class="container-full">
 
     <!-- Main content -->
+    <!--
     <section class="content">
         <div class="row">
             <div class="col-xl-3 col-6">
@@ -314,7 +315,7 @@
                 </div>  
             </div>
         </div>
-    </section>
+    </section> -->
     <!-- /.content -->
   </div>
 
