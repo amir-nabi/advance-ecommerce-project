@@ -87,6 +87,22 @@ class ProductController extends Controller
         
         
               ////////// Multiple Image Upload Start ///////////
+
+              $imagess = $request->file('product_thumbnail');
+              if ($imagess){
+                $make_name = hexdec(uniqid()).'.'.$imagess->getClientOriginalExtension();
+                Image::make($imagess)->resize(917,1000)->save('upload/products/multi-image/'.$make_name);
+                $uploadPath = 'upload/products/multi-image/'.$make_name;
+        
+                MultiImg::insert([
+        
+                    'product_id' => $product_id,
+                    'photo_name' => $uploadPath,
+                    'created_at' => Carbon::now(), 
+        
+                ]);
+        
+              }
         
               $images = $request->file('multi_img');
               if ($images){

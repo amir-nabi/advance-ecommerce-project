@@ -172,7 +172,7 @@
 				 <div class="form-group">
 			<h5>Product Tags in English <span class="text-danger">*</span></h5>
 			<div class="controls">
-	 <input type="text" name="product_tags_eng" class="form-control" value="Lorem,Ipsum,Amet" data-role="tagsinput" >
+	 <input type="text" name="product_tags_eng" class="form-control"  >
      @error('product_tags_eng') 
 	 <span class="text-danger">{{ $message }}</span>
 	 @enderror
@@ -194,7 +194,7 @@
 	    <div class="form-group">
 			<h5>Product Tags in Arabic <span class="text-danger">*</span></h5>
 			<div class="controls">
-	 <input dir="rtl" type="text" name="product_tags_ar" class="form-control" value="غوشي,اطلالة,حرير" data-role="tagsinput" >
+	 <input dir="rtl" type="text" name="product_tags_ar" class="form-control"  >
      @error('product_tags_ar') 
 	 <span class="text-danger">{{ $message }}</span>
 	 @enderror
@@ -208,7 +208,7 @@
 				 <div class="form-group">
 			<h5>Product Size in English <span class="text-dark">(Optional)</span></h5>
 			<div class="controls">
-	 <input type="text" name="product_size_eng" class="form-control" value="Small,Midium,Large" data-role="tagsinput" >
+	 <input type="text" name="product_size_eng" class="form-control"  >
      @error('product_size_eng') 
 	 <span class="text-danger">{{ $message }}</span>
 	 @enderror
@@ -223,7 +223,7 @@
 				 <div class="form-group">
 			<h5>Product Size in Arabic <span class="text-dark">(Optional)</span></h5>
 			<div class="controls">
-	 <input dir="rtl" type="text" name="product_size_ar" class="form-control" value="صغير,متوسط,كبير جدا" data-role="tagsinput" >
+	 <input dir="rtl" type="text" name="product_size_ar" class="form-control"  >
      @error('product_size_ar') 
 	 <span class="text-danger">{{ $message }}</span>
 	 @enderror
@@ -242,7 +242,7 @@
 	    <div class="form-group">
 			<h5>Product Color in English <span class="text-danger">*</span></h5>
 			<div class="controls">
-	 <input type="text" name="product_color_eng" class="form-control" value="red,Black,Amet" data-role="tagsinput" >
+	 <input type="text" name="product_color_eng" class="form-control"  >
      @error('product_color_eng') 
 	 <span class="text-danger">{{ $message }}</span>
 	 @enderror
@@ -256,7 +256,7 @@
 				 <div class="form-group">
 			<h5>Product Color in Arabic <span class="text-danger">*</span></h5>
 			<div class="controls">
-	 <input type="text" name="product_color_ar" class="form-control" value="أحمر,أزرق,أخضر" data-role="tagsinput" >
+	 <input type="text" name="product_color_ar" class="form-control"  >
      @error('product_color_ar') 
 	 <span class="text-danger">{{ $message }}</span>
 	 @enderror
