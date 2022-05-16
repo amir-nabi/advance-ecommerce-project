@@ -46,33 +46,7 @@
 </div><!-- /.sidebar-widget -->
 <!-- ============================================== NEWSLETTER: END ============================================== -->
 
-<!-- ============================================== Testimonials============================================== -->
-<div class="sidebar-widget  wow fadeInUp outer-top-vs ">
-	<div id="advertisement" class="advertisement">
-        <div class="item">
-            <div class="avatar"><img src="{{ asset('frontend/assets/images/testimonials/member1.png')}}" alt="Image"></div>
-		<div class="testimonials"><em>"</em> Vtae sodales aliq uam morbi non sem lacus port mollis. Nunc condime tum metus eud molest sed consectetuer.<em>"</em></div>
-		<div class="clients_author">John Doe	<span>Abc Company</span>	</div><!-- /.container-fluid -->
-        </div><!-- /.item -->
 
-         <div class="item">
-         	<div class="avatar"><img src="{{ asset('frontend/assets/images/testimonials/member3.png')}}" alt="Image"></div>
-		<div class="testimonials"><em>"</em>Vtae sodales aliq uam morbi non sem lacus port mollis. Nunc condime tum metus eud molest sed consectetuer.<em>"</em></div>
-		<div class="clients_author">Stephen Doe	<span>Xperia Designs</span>	</div>    
-        </div><!-- /.item -->
-
-        <div class="item">
-            <div class="avatar"><img src="{{ asset('frontend/assets/images/testimonials/member2.png')}}" alt="Image"></div>
-		<div class="testimonials"><em>"</em> Vtae sodales aliq uam morbi non sem lacus port mollis. Nunc condime tum metus eud molest sed consectetuer.<em>"</em></div>
-		<div class="clients_author">Saraha Smith	<span>Datsun &amp; Co</span>	</div><!-- /.container-fluid -->
-        </div><!-- /.item -->
-
-    </div><!-- /.owl-carousel -->
-</div>
-    
-<!-- ============================================== Testimonials: END ============================================== -->
-
- 
 
 				</div>
 			</div><!-- /.sidebar -->
@@ -159,10 +133,7 @@
                 <div class="col-sm-6">
                     <div class="price-box">
                         @if ($products->discount_price > 0)
-                        @php
-                        $discount = $products->selling_price - $products->discount_price
-                        @endphp
-                        <span class="price">${{ $discount }}</span>
+                        <span class="price">${{ $products->discount_price }}</span>
                         <span class="price-strike">${{ $products->selling_price }}</span>
                         @else
                         <span class="price">${{ $products->selling_price }}</span>

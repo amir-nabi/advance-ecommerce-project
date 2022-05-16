@@ -18,7 +18,7 @@
             </div>
             <div class="col-md-6">
                 <div class="card">
-                    <h3 class="text-center"><span class="text-danger">Hi...</span><strong>{{ Auth::user()->name }}</strong> Welcome To E-commerce Shopline</h3>
+                    <h3 class="text-center"><span class="text-danger">Hi...</span><strong>{{ Auth::user()->name }}</strong> Welcome To AMIR ShopOnline</h3>
                 </div>
             </div>
         </div>

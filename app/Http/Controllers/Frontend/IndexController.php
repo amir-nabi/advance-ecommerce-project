@@ -80,6 +80,23 @@ class IndexController extends Controller
         }
     }
 
+
+
+	///// Advance Search Options 
+
+	public function SearchProduct(Request $request){
+
+		$request->validate(["search" => "required"]);
+
+		$item = $request->search;		 
+        
+		$products = Product::where('product_name_eng','LIKE',"%$item%")->select('product_name_eng','product_thumbnail','selling_price','id','product_slug_eng')->limit(5)->get();
+		return view('frontend.product.search_product',compact('products'));
+
+
+
+	} 
+
     public function ProductDetails($id,$slug){
         $products = Product::findOrFail($id);
         

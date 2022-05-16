@@ -14,7 +14,7 @@
               <li><a href="{{ route('mycart') }}"><i class="icon fa fa-shopping-cart"></i>My Cart</a></li>
               <li><a href="#"><i class="icon fa fa-check"></i>Checkout</a></li>
               @auth
-              <li><a href="{{ route('user.profile') }}"><i class="icon fa fa-lock"></i>Profile</a></li>
+              <li><a href="{{ route('user.logout') }}"><i class="icon fa fa-lock"></i>Logout</a></li>
               @else
               <li><a href="{{ route('login') }}"><i class="icon fa fa-lock"></i>Login/Register</a></li>
               @endauth
@@ -26,7 +26,7 @@
               <li><a href="#"><i class="icon fa fa-shopping-cart"></i>عربة التسوق الخاصة بي</a></li>
               <li><a href="#"><i class="icon fa fa-check"></i>الدفع</a></li>
               @auth
-              <li><a href="{{ route('user.profile') }}"><i class="icon fa fa-lock"></i>الملف الشخصي</a></li>
+              <li><a href="{{ route('user.logout') }}"><i class="icon fa fa-lock"></i> خروج</a></li>
               @else
               <li><a href="{{ route('login') }}"><i class="icon fa fa-lock"></i>الدخول/التسجيل</a></li>
               @endauth
@@ -109,9 +109,10 @@
                       </ul>
                     </li>
                   </ul>
-                  <input class="search-field" placeholder="Search here..." />
-                  <a class="search-button" href="#" ></a> </div>
-              </form>
+                  <input class="search-field" onfocus="search_result_show()" onblur="search_result_hide()" id="search" name="search" placeholder="Search here..." />
+                  <button class="search-button" type="submit"></button> </div>
+                </form>
+                <div id="searchProducts"></div>
             </div>
             @else 
             <div class="search-area">
@@ -296,3 +297,30 @@
     <!-- ============================================== NAVBAR : END ============================================== --> 
     
   </header>
+
+  <style>
+  
+    .search-area{
+      position: relative;
+    }
+      #searchProducts {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #ffffff;
+        z-index: 999;
+        border-radius: 8px;
+        margin-top: 5px;
+      }
+    </style>
+    
+    
+    <script>
+      function search_result_hide(){
+        $("#searchProducts").slideUp();
+      }
+       function search_result_show(){
+          $("#searchProducts").slideDown();
+      }
+    </script>

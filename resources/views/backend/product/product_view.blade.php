@@ -39,11 +39,7 @@
                                 <span class="badge badge-pill badge-danger">No Discount</span>
                    
                                 @else
-                                @php
-                                $discount = ($prd->discount_price/$prd->selling_price) * 100;
-                                $new_price = $prd->selling_price - $prd->discount_price;
-                                @endphp
-                      <span>{{ round($discount)  }}% [{{ $new_price }}£]</span>
+                      <span>{{ round($prd->discount_price) }} £</span>
                    
                                 @endif
                               </td>

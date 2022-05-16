@@ -130,6 +130,7 @@ Route::get('/product/tag/{tag}', [IndexController::class, 'TagWiseProduct']);
 Route::get('/subcategory/product/{subcat_id}/{slug}', [IndexController::class, 'SubCatWiseProduct']);
 Route::get('/subsubcategory/product/{subsubcat_id}/{slug}', [IndexController::class, 'SubSubCatWiseProduct']);
 Route::get('/product/view/modal/{id}', [IndexController::class, 'ProductViewAjax']); 
+Route::post('search-product', [IndexController::class, 'SearchProduct']);
 
 Route::post('/cart/data/store/{id}', [CartController::class, 'AddToCart']); 
 Route::get('/product/mini/cart/', [CartController::class, 'AddMiniCart']); 

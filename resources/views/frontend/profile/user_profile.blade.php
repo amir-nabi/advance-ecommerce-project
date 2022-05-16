@@ -18,7 +18,7 @@
             </div>
             <div class="col-md-6">
                 <div class="card">
-                    <h3 class="text-center"><span class="text-danger">Hi...</span><strong>{{ Auth::user()->name }}</strong> Profile Update</h3>
+                    <h3 class="text-center"><span class="text-danger">Hi...</span><strong>{{ Auth::user()->name }}</strong> Welcome To AMIR ShopOnline</h3>
                     <div class="card-body">
                         <form method="post" action="{{ route('user.profile.store') }}" enctype="multipart/form-data">
                             @csrf

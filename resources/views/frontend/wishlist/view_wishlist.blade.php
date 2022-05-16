@@ -30,6 +30,7 @@
 				</tr>
 			</thead>
 			<tbody id="wishlist">
+			</tbody>
 		</table>
 	</div>
 </div>			</div><!-- /.row -->
