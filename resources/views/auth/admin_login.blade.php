@@ -18,7 +18,7 @@
 	<link rel="stylesheet" href="{{ asset('backend/css/skin_color.css') }}">	
 
 </head>
-<body class="hold-transition theme-primary bg-gradient-primary">
+<body class="hold-transition theme-primary bg-gradient-warning">
 	
 	<div class="container h-p100">
 		<div class="row align-items-center justify-content-md-center h-p100">	
@@ -59,12 +59,12 @@
 									<!-- /.col -->
 									<div class="col-6">
 									 <div class="fog-pwd text-right">
-										<a href="{{ route('password.request') }}" class="text-white hover-info"><i class="ion ion-locked"></i> Forgot pwd?</a><br>
+										<a href="{{ route('password.request') }}" class="text-white hover-info"><i class="ion ion-locked"></i> Forgot password?</a><br>
 									  </div>
 									</div>
 									<!-- /.col -->
 									<div class="col-12 text-center">
-									  <button type="submit" class="btn btn-info btn-rounded mt-10">SIGN IN</button>
+									  <button type="submit" class="btn btn-danger btn-rounded mt-10">SIGN IN</button>
 									</div>
 									<!-- /.col -->
 								  </div>
